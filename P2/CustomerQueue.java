@@ -39,7 +39,7 @@ public class CustomerQueue {
         this.nextIn = (this.nextIn + 1) % this.queueLength;
         this.count ++;
 
-        /** Notify threads about one new customer. */
+        /** Notify all threads about one new customer. */
         notifyAll();
     }
 
@@ -60,7 +60,7 @@ public class CustomerQueue {
         this.nextOut = (this.nextOut + 1) % this.queueLength;
         this.count --;
 
-        /** Notify threads about one less customer waiting. */
+        /** Notify all threads about one less customer waiting. */
         notifyAll();
 
         return customer;

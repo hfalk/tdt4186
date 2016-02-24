@@ -40,7 +40,7 @@ public class Barber extends Thread {
     public void run() {
         while (!finished) {
             try {
-                /** Barber is sleeping times a random amount, before next action. */
+                /** Barber is sleeping a random amount, before next action. */
                 this.gui.barberIsSleeping(this.position);
                 Thread.sleep (Globals.barberSleep);
                 this.gui.barberIsAwake(this.position);

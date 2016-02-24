@@ -37,7 +37,7 @@ public class Doorman extends Thread{
     public void run() {
         while (!finished) {
             try {
-                /** Doorman is sleeping times a random amount, before next action. */
+                /** Doorman is sleeping a random amount, before next action. */
                 this.gui.println("Doorman is sleeping");
                 Thread.sleep (Globals.doormanSleep);
             }
